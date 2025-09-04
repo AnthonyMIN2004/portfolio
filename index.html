@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthony — Portfolio</title>
+  <meta name="description" content="Anthony — IT student, server builder, multilingual.">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="preload" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Progress bar -->
+  <div id="progress" aria-hidden="true"></div>
+  <div class="site-noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-row">
+      <a class="logo" href="#home" aria-label="Logo">Anthony</a>
+      <nav class="nav">
+        <a href="#home" data-i18n="nav.home">ホーム</a>
+        <a href="#about" data-i18n="nav.about">自己紹介</a>
+        <a href="#projects" data-i18n="nav.projects">プロジェクト</a>
+        <a href="#contact" data-i18n="nav.contact">連絡</a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Language toggle">
+        <button id="lang-ja" class="chip active" aria-pressed="true">JP</button>
+        <button id="lang-en" class="chip" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <h1 id="hero-title" class="headline reveal" data-i18n="hero.title">
+          Anthony — IT Student / Server Builder / Multilingual
+        </h1>
+        <p id="hero-sub" class="subhead reveal" data-i18n="hero.sub">
+          I design practical systems: PCs, servers, WordPress.
+        </p>
+        <div class="cta-row reveal">
+          <a id="cta" class="btn primary" href="#contact" data-i18n="hero.cta" aria-label="Go to contact">
+            Contact
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal" aria-labelledby="about-title">
+      <div class="container two-col">
+        <div>
+          <h2 id="about-title" data-i18n="about.title">自己紹介</h2>
+          <p id="about-body" data-i18n="about.body">
+            高校時代にPCパーツの小さな事業を立ち上げ、社員十名規模に成長させました。現在は日本の大学でC言語やJavaを学びつつ、サーバー構築やWordPressにも取り組んでいます。英語・日本語・ミャンマー語を使え、新しい環境でも素早く学び成果を出せます。
+          </p>
+        </div>
+        <div class="about-figure">
+          <img src="assets/portrait.jpg" width="480" height="480" alt="Placeholder portrait">
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section reveal" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title" data-i18n="projects.title">プロジェクト</h2>
+        <div class="grid" data-stagger>
+          <article class="card reveal-child">
+            <h3 id="proj1-title" data-i18n="projects.p1.title">WordPress Server</h3>
+                        <p id="proj1-desc" data-i18n="projects.p1.desc">Nginx/Apache, SSL, backups. Simple blog infra.</p>
+            <a class="btn ghost" href="#" aria-label="View project 1" data-desc-en="Managed WordPress hosting on Apache/Nginx with HTTPS via Let’s Encrypt, automated backups to off-site storage, and a simple CI flow so content updates deploy safely without downtime." data-desc-ja="Apache/Nginx上でのWordPress運用。Let’s Encryptで常時SSL、バックアップは外部ストレージへ自動化。軽量なCIにより、記事更新を安全に無停止で反映。">詳細</a>
+          </article>
+          <article class="card reveal-child">
+            <h3 id="proj2-title" data-i18n="projects.p2.title">PC Parts Trading</h3>
+                        <p id="proj2-desc" data-i18n="projects.p2.desc">Built/sold PCs, customer support, inventory.</p>
+            <a class="btn ghost" href="#" aria-label="View project 2" data-desc-en="Sourced GPUs/CPUs, negotiated with suppliers, assembled custom PCs, and handled after‑sales support and returns. Managed a small team and kept inventory moving with minimal dead stock." data-desc-ja="GPU・CPU等の仕入れ交渉から組立、販売、アフターサポートまで一貫対応。小規模チームを運営し、在庫回転と不良率の低減を両立。">詳細</a>
+          </article>
+          <article class="card reveal-child">
+            <h3 id="proj3-title" data-i18n="projects.p3.title">C / Java Coursework</h3>
+                        <p id="proj3-desc" data-i18n="projects.p3.desc">Console tools, data structures, fundamentals.</p>
+            <a class="btn ghost" href="#" aria-label="View project 3" data-desc-en="University assignments and self‑study: file parsing, basic data structures, CLI utilities, and code quality practices (linting, unit tests where useful)." data-desc-ja="大学課題と自学の成果。ファイルパース、基礎データ構造、CLIユーティリティ、lintや簡易テストなど品質面も意識。">詳細</a>
+          </article>
+          <article class="card reveal-child">
+            <h3 id="proj4-title" data-i18n="projects.p4.title">Home Server Setup</h3>
+                        <p id="proj4-desc" data-i18n="projects.p4.desc">Firewall, port forwarding, dynamic DNS, SSL.</p>
+            <a class="btn ghost" href="#" aria-label="View project 4" data-desc-en="Self‑hosted home server: firewall rules, router port‑forwarding, dynamic DNS, automatic TLS, and hardening basics (fail2ban, minimal services, logs/alerts)." data-desc-ja="自宅サーバー構築。Firewall設定、ルーターのポート開放、DDNS、TLS自動更新に加え、fail2ban等の基本的なハードニングとログ監視も実装。">詳細</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" data-i18n="contact.title">連絡</h2>
+        <p id="contact-sub" class="muted" data-i18n="contact.sub">
+          お問い合わせはメールでどうぞ。
+        </p>
+        <a id="contact-btn" class="btn primary" href="mailto:25501@occ.ac.jp" aria-label="Send email" data-i18n="contact.button">
+          メールする
+        </a>
+      </div>
+    </section>
+  
+  <!-- Modal for project details -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card" role="document">
+      <button class="modal-close" aria-label="Close">×</button>
+      <h3 id="modal-title">Project</h3>
+      <p id="modal-desc" class="muted">Details...</p>
+    </div>
+  </div>
+
+  </main>
+
+  <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
+
+  <footer class="footer">
+    <div class="container small">
+      <span>&copy; <span id="year"></span> Anthony</span>
+      <span class="muted">·</span>
+      <span class="muted" data-i18n="footer.updated">最終更新:</span>
+      <time id="updated"></time>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
